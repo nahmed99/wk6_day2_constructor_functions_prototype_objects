@@ -18,6 +18,9 @@ Person.prototype.printAge = function() {
 }
 
 
+module.exports = Person;
+
+
 //====== create the objects
 
 // The following line of code instantiates the above class.
