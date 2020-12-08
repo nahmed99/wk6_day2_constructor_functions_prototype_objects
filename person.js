@@ -5,23 +5,36 @@ const Person = function(firstName, lastName, age) {
     this.age = age;
 }
 
-// The following line of code instantiates the above class.
-const shaggy = new Person("Shaggy", "Rogers", 23);
-// console.log(shaggy.firstName);
-// console.log(shaggy.lastName);
-// console.log(shaggy.age);
-
-const scooby = new Person("Scooby", "Doo", 13);
-// console.log(scooby.firstName);
-// console.log(scooby.lastName);
-// console.log(scooby.age);
-
-const fred = new Person("Scrappy", "Doo", 57);
-// console.log(fred.firstName);
-// console.log(fred.lastName);
-// console.log(fred.age);
-
 
 //===== methods ========
 
 
+Person.prototype.greet = function() {
+    console.log("Hi, my name is", this.firstName)
+}
+
+Person.prototype.printAge = function() {
+    console.log(`I am ${this.age} years old`)
+}
+
+
+//====== create the objects
+
+// The following line of code instantiates the above class.
+const shaggy = new Person("Shaggy", "Rogers", 38);
+// console.log(shaggy.firstName);
+// console.log(shaggy.lastName);
+// console.log(shaggy.age);
+
+const scooby = new Person("Scooby", "Doo", 37);
+// console.log(scooby.firstName);
+// console.log(scooby.lastName);
+// console.log(scooby.age);
+
+const scrappy = new Person("Scrappy", "Doo", 13);
+// console.log(fred.firstName);
+// console.log(fred.lastName);
+// console.log(fred.age);
+
+scrappy.greet();
+scrappy.printAge();
